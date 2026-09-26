@@ -1,1 +1,9 @@
-# AssistantIA
+# SODO AI • Assistant Odoo 16 & Odoo 19
+
+Assistant d'intelligence artificielle connecté aux bases de données **Odoo 16** et **Odoo 19** pour assister les utilisateurs sur :
+- 📊 **Ventes & Chiffre d'Affaires (CA)**
+- 📦 **Stock & Inventaire (Quants, Réapprovisionnement)**
+- 📁 **Organisation & Projets (Tâches, Jalons, Kanban)**
+- 🛒 **Achats & Fournisseurs (Commandes, RFQ, Dépenses)**
+- 📈 **Monitoring 360° & KPIs Stratégiques**
+- 💡 **Guides d'utilisation pas-à-pas des modules Odoo**
