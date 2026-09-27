@@ -1,0 +1,40 @@
+spring:
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: mistral
+          temperature: 0.2
+      embedding:
+        options:
+          model: nomic-embed-text
+
+server:
+  port: 8081
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+
+odoo:
+  default-version: v19
+  instances:
+    v16:
+      name: "Odoo 16 Production / Staging"
+      version: "16.0"
+      web-url: "http://localhost:8069"
+      database: "odoo16"
+      db-url: "jdbc:postgresql://localhost:5432/odoo16"
+      username: "odoo"
+      password: "odoo"
+
+    v19:
+      name: "Odoo 19 Next-Gen"
+      version: "19.0"
+      web-url: "http://localhost:8070"
+      database: "odoo19"
+      db-url: "jdbc:postgresql://localhost:5432/odoo19"
+      username: "odoo"
+      password: "odoo"
