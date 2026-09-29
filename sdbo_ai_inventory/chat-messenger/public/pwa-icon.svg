@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1877f2" />
+      <stop offset="100%" stop-color="#0a4bb3" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d2ff" />
+      <stop offset="100%" stop-color="#3a7bd5" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Fond Arrondi Application -->
+  <rect width="512" height="512" rx="110" fill="url(#bgGrad)" />
+  
+  <!-- Cercles décoratifs Tech -->
+  <circle cx="256" cy="256" r="190" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="8" />
+  <circle cx="256" cy="256" r="140" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="4" stroke-dasharray="8 8" />
+  
+  <!-- Robot / AI Shield Icon -->
+  <g filter="url(#shadow)">
+    <!-- Forme centrale Odoo & SODO -->
+    <rect x="136" y="146" width="240" height="220" rx="48" fill="#ffffff" />
+    
+    <!-- Écran / Visage IA -->
+    <rect x="156" y="166" width="200" height="130" rx="30" fill="#111827" />
+    
+    <!-- Yeux Lumineux Cyan / Intelligence -->
+    <circle cx="206" cy="226" r="22" fill="url(#glow)" />
+    <circle cx="212" cy="220" r="7" fill="#ffffff" />
+    
+    <circle cx="306" cy="226" r="22" fill="url(#glow)" />
+    <circle cx="312" cy="220" r="7" fill="#ffffff" />
+    
+    <!-- Sourire / Ondes Vocales -->
+    <path d="M 226 266 Q 256 286 286 266" stroke="url(#glow)" stroke-width="6" stroke-linecap="round" fill="none" />
+    
+    <!-- Antenne IA -->
+    <line x1="256" y1="146" x2="256" y2="106" stroke="#ffffff" stroke-width="12" stroke-linecap="round" />
+    <circle cx="256" cy="96" r="18" fill="url(#glow)" />
+    
+    <!-- Badge SODO / ODOO 16/19 -->
+    <rect x="186" y="316" width="140" height="34" rx="17" fill="#1877f2" />
+    <text x="256" y="339" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="16" text-anchor="middle" letter-spacing="1">SODO ODOO</text>
+  </g>
+</svg>

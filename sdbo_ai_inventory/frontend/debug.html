@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Widget Odoo 16 & 19 AI</title>
+    <style>
+        body { font-family: sans-serif; padding: 50px; line-height: 1.6; }
+        .hero { background: #f4f4f4; padding: 40px; border-radius: 8px; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>Plateforme ERP & Assistant Odoo 16 / 19</h1>
+        <p>Widget IA connecté pour l'assistance Ventes, Stock, Achats, Projets, CA et Monitoring.</p>
+        <p>Le widget apparaît en bas à droite de votre écran.</p>
+    </div>
+
+    <!-- 1. Importer le plugin -->
+    <script src="sodo-chat-plugin.js"></script>
+
+    <!-- 2. Ajouter le composant -->
+    <sodo-chat-widget 
+        server-url="http://localhost:8081" 
+        bot-name="Assistant Odoo"
+        odoo-version="v19">
+    </sodo-chat-widget>
+
+</body>
+</html>
