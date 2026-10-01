@@ -95,6 +95,11 @@ public class AiChatService {
         } else if (q.contains("monitoring") || q.contains("kpi") || q.contains("dashboard")) {
             redirect = "/web#action=base.action_partner_dashboard";
             intent = "MONITORING";
+        } else if (q.contains("rh") || q.contains("employé") || q.contains("employe") || q.contains("congé") || q.contains("conge")
+                || q.contains("présence") || q.contains("presence") || q.contains("pointage") || q.contains("logistique")
+                || q.contains("youssef") || q.contains("salma") || q.contains("samir") || q.contains("solde")) {
+            redirect = "/web#action=hr.open_view_employee_list_my";
+            intent = "HR";
         }
 
         String answer = "Voici les informations et indicateurs clés extraits de votre environnement Odoo " + version.toUpperCase() + " :\n\n" + businessContext;

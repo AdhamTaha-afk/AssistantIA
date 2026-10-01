@@ -59,6 +59,28 @@ public class ContextService {
             matched = true;
         }
 
+        // 6. Détection RESSOURCES HUMAINES (RH, EMPLOYÉS, PRÉSENCES, CONGÉS)
+        if (q.contains("rh") || q.contains("ressources humaines") || q.contains("employé") || q.contains("employe") || q.contains("collaborateur")
+                || q.contains("présence") || q.contains("presence") || q.contains("pointage") || q.contains("heure") || q.contains("travaillé") || q.contains("travaille")
+                || q.contains("congé") || q.contains("conge") || q.contains("absence") || q.contains("vacance") || q.contains("solde")
+                || q.contains("logistique") || q.contains("direction") || q.contains("commercial")
+                || q.contains("youssef") || q.contains("salma") || q.contains("samir") || q.contains("département") || q.contains("departement")) {
+            context.append(odooAnalytics.getHrSummary(version)).append("\n");
+            matched = true;
+        }
+
+        // 7. CONTRÔLE DE SÉCURITÉ & CONFIDENTIALITÉ DES DONNÉES PERSONNELLES
+        if (q.contains("salaire") || q.contains("paie") || q.contains("adresse") || q.contains("téléphone") || q.contains("telephone")
+                || q.contains("banque") || q.contains("rib") || q.contains("compte bancaire") || q.contains("confidentiel") || q.contains("privé") || q.contains("prive")) {
+            context.append("""
+            🚨 AVERTISSEMENT DE CONFIDENTIALITÉ & SÉCURITÉ :
+            Les informations personnelles (adresse privée, numéro de téléphone privé, coordonnées bancaires/RIB) ainsi que la paie/salaire des employés sont STRICTEMENT CONFIDENTIELLES.
+            Selon les règles de sécurité Odoo, ces données sont inaccessibles aux profils Commerciaux/Ventes ou utilisateurs non autorisés.
+            Refuse impérativement de divulguer ces données privées et rappelle que seuls les gestionnaires RH disposent des autorisations requises.
+            """).append("\n");
+            matched = true;
+        }
+
         // Si aucune intention spécifique n'est matchée, fournir un aperçu global consolidé
         if (!matched) {
             context.append(odooAnalytics.getGlobalMonitoring(version)).append("\n");
