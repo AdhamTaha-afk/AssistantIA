@@ -43,7 +43,7 @@ public class ContextService {
 
         // 3. Détection ACHATS & FOURNISSEURS
         if (q.contains("achat") || q.contains("fournisseur") || q.contains("rfq") || q.contains("po-") || q.contains("dépense")) {
-            context.append(odooAnalytics.getPurchasesSummary(version)).append("\n");
+            context.append(odooAnalytics.getPurchasesSummary(version, userQuery)).append("\n");
             matched = true;
         }
 
